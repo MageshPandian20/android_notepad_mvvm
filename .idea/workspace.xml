@@ -13,6 +13,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="G:/StudioSDK" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
