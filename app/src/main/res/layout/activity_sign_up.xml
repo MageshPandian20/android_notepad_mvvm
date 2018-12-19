@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            style="@style/backgroundStyle"
+            android:layout_height="match_parent">
+
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:src="@drawable/ic_user_profile"
+                    android:id="@+id/imgProfilePicture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc_profile_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            <Space
+                    app:layout_constraintTop_toBottomOf="@+id/imgProfilePicture"
+                    android:id="@+id/space_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_64"/>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtName"
+                    app:layout_constraintTop_toBottomOf="@+id/space_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    style="@style/edtFieldStyle"
+                    android:hint="@string/label_name"
+                    android:layout_height="wrap_content"/>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtPhoneNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/edtName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    style="@style/edtFieldStyle"
+                    android:hint="@string/label_phoneNumber"
+                    android:layout_height="wrap_content"/>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtmailId"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    style="@style/edtFieldStyle"
+                    android:hint="@string/label_email"
+                    android:layout_height="wrap_content"/>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/edtmailId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    style="@style/edtFieldStyle"
+                    android:inputType="textPassword"
+                    android:hint="@string/label_password"
+                    android:layout_height="wrap_content"/>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtReenterPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    style="@style/edtFieldStyle"
+                    android:inputType="textPassword"
+                    android:hint="@string/label_reenterpassword"
+                    android:layout_height="wrap_content"/>
+
+            <Space
+                    app:layout_constraintTop_toBottomOf="@+id/edtReenterPassword"
+                    android:id="@+id/spaceSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_64"/>
+            <Button
+                    android:id="@+id/btnSignUp"
+                    app:layout_constraintTop_toBottomOf="@+id/spaceSignUp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/ButtonPrimaryStyle"
+                    android:text="@string/button_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

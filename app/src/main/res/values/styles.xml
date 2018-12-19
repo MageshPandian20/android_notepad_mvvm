@@ -11,7 +11,78 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="ButtonPrimaryStyle">
+        <item name="android:layout_margin">@dimen/dp_16</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="CornerRadiusStyle">
+        <item name="android:background">@drawable/bg_button_rectangle</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="txtContentStyle">
+        <item name="android:layout_margin">@dimen/dp_4</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+
+    <style name="txtHeaderStyle">
+        <item name="android:layout_margin">@dimen/dp_4</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="edtFieldStyle">
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:height">@dimen/dp_48</item>
+        <item name="android:layout_margin">@dimen/dp_8</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:background">@drawable/bg_trans_rectangle</item>
+        <item name="android:textColorHint">@color/txtLightGrey</item>
+
+    </style>
+
+    <style name="edtContentFieldStyle">
+        <item name="android:height">@dimen/dp_256</item>
+        <item name="android:layout_margin">@dimen/dp_8</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:background">@drawable/bg_trans_rectangle</item>
+        <item name="android:textColorHint">@color/txtLightGrey</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/dp_16</item>
+
+    </style>
+
+    <style name="backgroundStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/dp_16</item>
+    </style>
+
+    <style name="recyclerItemStyle">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:layout_margin">@dimen/dp_4</item>
+
+    </style>
+
+
+
 
 </resources>

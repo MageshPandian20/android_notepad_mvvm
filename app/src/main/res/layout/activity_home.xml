@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable name="listener"
+                  type="com.example.esamohammed.mvvm.viewModel.activity.HomeViewModel"/>
+
+        <variable name="database"
+                  type="com.example.esamohammed.mvvm.repository.database.AppDatabase"/>
+
+        <variable name="adapter"
+                  type="com.example.esamohammed.mvvm.adapter.NotesAdapter"/>
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerNotes"
+                style="@style/backgroundStyle"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:adapter="@{adapter}"
+                app:spanCount="2"
+                app:layout_constraintBottom_toTopOf="@+id/cLayBottomBar"
+                app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
+                tools:listitem="@layout/inflate_notes_list"
+                tools:itemCount="5"/>
+
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/cLayBottomBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="@dimen/dp_100">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:layout_gravity="bottom"
+
+                    android:onClick="@{()->listener.navigateToAddNotes()}"
+                    android:background="@color/app_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"/>
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="@dimen/dp_100">
+
+          <!--     <android.support.v7.widget.AppCompatImageView
+                        android:background="@drawable/bg_button_circle"
+                        android:layout_width="@dimen/dp_80"
+                        android:src="@drawable/ic_add_button"
+                        android:onClick="@{()->listener.navigateToAddNotes()}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="@dimen/dp_80"/>-->
+
+
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

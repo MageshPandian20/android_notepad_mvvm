@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            style="@style/backgroundStyle"
+            android:layout_height="match_parent">
+
+       <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtNotesName"
+                android:layout_width="match_parent"
+                style="@style/edtFieldStyle"
+                android:hint="@string/label_NotesName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtNotesContent"
+                android:layout_width="match_parent"
+                style="@style/edtContentFieldStyle"
+                android:hint="@string/label_NotesContent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtNotesName"/>
+
+        <Button
+                android:text="@string/button_Add"
+                style="@style/ButtonPrimaryStyle"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnClearNotes"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAddNotes"/>
+
+
+        <Button android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/button_clear"
+                style="@style/ButtonPrimaryStyle"
+                android:layout_width="match_parent"
+                android:id="@+id/btnClearNotes"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
