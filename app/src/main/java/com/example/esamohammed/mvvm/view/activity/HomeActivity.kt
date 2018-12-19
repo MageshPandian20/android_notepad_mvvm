@@ -2,10 +2,11 @@ package com.example.esamohammed.mvvm.view.activity
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import com.example.esamohammed.mvvm.R
 import com.example.esamohammed.mvvm.util.Constants.EventFlags.Companion.REFRESH_NOTESLIST
 import com.example.esamohammed.mvvm.util.Constants.NavigationFlag.Companion.NAVIGATE_TO_ADDNOTES
 import com.example.esamohammed.mvvm.viewModel.activity.HomeViewModel
+import com.example.esamohammed.notepadmvvm.R
+import com.example.esamohammed.notepadmvvm.databinding.ActivityHomeBinding
 
 class HomeActivity : BaseActivity<HomeViewModel, ActivityHomeBinding>() {
 

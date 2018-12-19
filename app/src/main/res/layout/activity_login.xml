@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
     <data>
-
-        <variable
-                name="data"
-                type="com.example.esamohammed.mvvm.model.api.dto.request.LoginRequest"/>
-        <variable
+         <variable
                 name="listener"
                 type="com.example.esamohammed.mvvm.viewModel.activity.LoginViewModel"/>
-
-
     </data>
 
 

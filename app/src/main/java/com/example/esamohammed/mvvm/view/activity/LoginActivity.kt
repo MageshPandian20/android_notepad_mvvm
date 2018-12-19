@@ -23,6 +23,7 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>(), View
     override fun initializeListener() {
         viewBinding.btnSignIn.setOnClickListener(this)
         viewBinding.listener = viewModel
+
         viewModel.eventLiveData.observe(this, Observer {
             when (it) {
                 SHOW_TOAST -> showMessage("Message")
