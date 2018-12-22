@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NotepadMvvm.iml" filepath="$PROJECT_DIR$/NotepadMvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android_notepad_mvvm.iml" filepath="$PROJECT_DIR$/android_notepad_mvvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

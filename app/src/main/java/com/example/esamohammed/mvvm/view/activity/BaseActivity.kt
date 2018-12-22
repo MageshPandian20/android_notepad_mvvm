@@ -118,10 +118,7 @@ abstract class BaseActivity<VM : BaseViewModel, VB : ViewDataBinding> : AppCompa
             overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right)
     }
 
-
     fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
-
 }

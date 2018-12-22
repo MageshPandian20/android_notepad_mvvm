@@ -21,16 +21,15 @@ class HomeActivity : BaseActivity<HomeViewModel, ActivityHomeBinding>() {
     override fun initializeListener() {
         viewBinding.listener = viewModel
         viewModel.listEventLiveData.observe(this, Observer {
-           when(it?.second){
-               REFRESH_NOTESLIST->   viewBinding.adapter = it.first
-           }
-       })
+            when (it?.second) {
+                REFRESH_NOTESLIST -> viewBinding.adapter = it.first
+            }
+        })
 
-
-
-        viewModel.navigationEventLiveData.observe(this, Observer {
-            when(it?.second){
-                NAVIGATE_TO_ADDNOTES->   navigateTo(AddingNotesActivity::class.java,it.first,true)}
+        viewModel.eventLiveData.observe(this, Observer {
+            when (it?.first) {
+                NAVIGATE_TO_ADDNOTES -> navigateTo(AddingNotesActivity::class.java, null, true)
+            }
         })
     }
 }

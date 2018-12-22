@@ -31,7 +31,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_width="match_parent"
-                android:text="@={listener.loginLiveData.userId}"
                 android:hint="@string/label_userId"
                 style="@style/edtFieldStyle"
                 android:layout_height="wrap_content"/>
@@ -43,7 +42,6 @@
                 style="@style/edtFieldStyle"
                 android:hint="@string/label_password"
                 android:id="@+id/txtPassword"
-                android:text="@={listener.loginLiveData.password}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="match_parent"

@@ -24,17 +24,22 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>(), View
         viewBinding.btnSignIn.setOnClickListener(this)
         viewBinding.listener = viewModel
 
+        viewModel.loginResposeData.observe(this, Observer {
+            navigateTo(HomeActivity::class.java, null, true)
+            finish()
+        })
+
         viewModel.eventLiveData.observe(this, Observer {
-            when (it) {
-                SHOW_TOAST -> showMessage("Message")
+            when (it?.first) {
+                SHOW_TOAST -> showMessage(it.second)
                 NAVIGATE_TO_HOMEACTIVITY -> {
                     navigateTo(HomeActivity::class.java, null, true)
                     finish()
                 }
                 NAVIGATE_TO_SIGNUPACTIVITY -> navigateTo(SignUpActivity::class.java, null, true)
+           else-> showMessage("Oops Something went wrong")
             }
         })
-
     }
 
     override fun onClick(v: View?) {
@@ -47,6 +52,4 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>(), View
             }
         }
     }
-
-
 }

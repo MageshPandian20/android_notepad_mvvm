@@ -31,6 +31,7 @@ abstract class BaseRepository {
     }
 
     protected fun <T : BaseResponse> enqueue(observable: Observable<T>): Observable<T> {
+
         return Observable.create<T> { emitter: ObservableEmitter<T> ->
             run {
                 observable.subscribeOn(Schedulers.newThread())
@@ -72,6 +73,7 @@ abstract class BaseRepository {
             callback.enqueue(object : Callback<T> {
                 override fun onFailure(call: Call<T>?, t: Throwable?) {
                     it.onError(t!!)
+
                 }
 
                 override fun onResponse(call: Call<T>?, response: Response<T>?) {

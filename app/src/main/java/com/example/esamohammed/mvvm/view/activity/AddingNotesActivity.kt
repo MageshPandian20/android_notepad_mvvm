@@ -10,7 +10,6 @@ import com.example.esamohammed.notepadmvvm.databinding.ActivityAddingNotesBindin
 
 class AddingNotesActivity : BaseActivity<AddingNotesViewModel, ActivityAddingNotesBinding>(), View.OnClickListener {
 
-
     override fun initializeView(): AddingNotesViewModel {
         return ViewModelProviders.of(this).get(AddingNotesViewModel::class.java)
     }
@@ -22,8 +21,9 @@ class AddingNotesActivity : BaseActivity<AddingNotesViewModel, ActivityAddingNot
     override fun initializeListener() {
         viewBinding.btnAddNotes.setOnClickListener(this)
         viewBinding.btnClearNotes.setOnClickListener(this)
-        viewModel.listEventLiveData.observe(this, Observer { option ->
-            when (option) {
+
+        viewModel.eventLiveData.observe(this, Observer { option ->
+            when (option?.first) {
                 NAVIGATE_TO_HOMEACTIVITY -> finish()
             }
         })
@@ -39,8 +39,8 @@ class AddingNotesActivity : BaseActivity<AddingNotesViewModel, ActivityAddingNot
                 )
             }
             R.id.btnClearNotes -> {
-                viewBinding.edtNotesName.setText("")
-                viewBinding.edtNotesContent.setText("")
+                viewBinding.edtNotesName.text?.clear()
+                viewBinding.edtNotesContent.text?.clear()
             }
         }
     }

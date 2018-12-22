@@ -22,4 +22,11 @@
     <string name="desc_profile_picture">Profile Picture</string>
     <string name="desc_app_icon">App Icon</string>
 
+
+    <string name="alert_userName_empty">User Name Required</string>
+    <string name="alert_password_required">Password Required</string>
+    <string name="alert_common">Oops something went wrong</string>
+    <string name="alert_mail_required">MailId Required</string>
+    <string name="alert_password_mismatch">Password Mismatch</string>
+
 </resources>

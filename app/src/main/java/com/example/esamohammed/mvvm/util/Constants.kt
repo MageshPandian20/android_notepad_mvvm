@@ -25,17 +25,6 @@ interface Constants {
         }
     }
 
- interface APIIDS {
-        companion object {
-            const val SIGNUP = 1000L
-            const val LOGIN = 1001L
-            const val LISTNOTES = 1002L
-            const val CREATENOTES = 1003L
-            const val EDITNOTES = 1004L
-        }
-    }
-
-
  interface PreferenceKeys {
         companion object {
             const val AUTH_TOKEN = "AUTH_TOKEN"
